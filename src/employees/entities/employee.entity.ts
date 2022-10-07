@@ -6,10 +6,12 @@ import {
   OneToOne,
   JoinColumn,
   ManyToOne,
+  ManyToMany,
+  JoinTable,
 } from 'typeorm';
 
 import { Department } from './department.entity';
-
+import { Project } from './project.entity';
 @Entity()
 export class Employee {
   @PrimaryGeneratedColumn()
@@ -33,4 +35,8 @@ export class Employee {
 
   @ManyToOne(() => Department, (department: Department) => department.employees)
   department: Department;
+
+  @ManyToMany(() => Project)
+  @JoinTable()
+  projects: Project[];
 }

@@ -3,6 +3,7 @@ export class CreateEmployeeDto {
   readonly email: string;
   readonly contactNumber: string;
   readonly departmentId: number;
+  readonly projectIds: number[];
 }
 
 export class UpdateEmployeeDto {
@@ -10,4 +11,5 @@ export class UpdateEmployeeDto {
   readonly email?: string;
   readonly contactNumber?: string;
   readonly departmentId?: number;
+  readonly projectIds?: number[];
 }
