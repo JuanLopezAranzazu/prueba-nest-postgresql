@@ -4,7 +4,8 @@ import { Repository } from 'typeorm';
 import { Project } from '../entities/project.entity';
 import { CreateProjectDto, UpdateProjectDto } from './../dtos/project.dtos';
 
-import { extractFormatDate } from './../../utils/formatDate';
+import formatDate from './../../utils/formatDate';
+const { extractFormatDate } = formatDate;
 
 @Injectable()
 export class ProjectsService {
